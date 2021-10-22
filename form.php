@@ -25,9 +25,9 @@
     // DB create
     $name_db = 'ajax1';
     $conn = new mysqli("localhost", "root", "root");
-    $name = $conn->real_escape_string($_POST["name"]);
-    $email = $conn->real_escape_string($_POST["email"]);
-    $message = $conn->real_escape_string($_POST["message"]);
+    $name = $conn->real_escape_string(htmlspecialchars($_POST["name"]));
+    $email = $conn->real_escape_string(htmlspecialchars($_POST["email"]));
+    $message = $conn->real_escape_string(htmlspecialchars($_POST["message"]));
     $create_db = "CREATE DATABASE IF NOT EXISTS ".$name_db;
     $create_table = "CREATE TABLE IF NOT EXISTS Users (id INTEGER AUTO_INCREMENT PRIMARY KEY, name text, email text, message text)";
     $conn->query($create_db);

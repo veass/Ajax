@@ -43,10 +43,7 @@
             <span>Записать</span> 
           </button>
         </div>
-
-
-
-      </form>
+     </form>
 
    </div>
  </div>
@@ -54,31 +51,31 @@
 
 
 
-    <section class="info">
+<section class="info">
   <div class="mycontainer">
   <div class="info__elements row">
 <?php    
 
-$conn = new mysqli("localhost", "root", "J6kl&89#");
-$conn->query("USE ajax1");
-$get_info = "SELECT * FROM Users";
-$result= $conn->query($get_info);
+  $conn = new mysqli("localhost", "root", "J6kl&89#");
+  $conn->query("USE ajax1");
+  $get_info = "SELECT * FROM Users";
+  $result= $conn->query($get_info);
 
-foreach($result as $row){
+  foreach($result as $row){
 
-      ?>
+        ?>
 
-<div class="col-12 col-lg-4">
-      <div class="card">
-        <div class="card__header center">
-          <span><?php echo $row["name"]; ?></span>
-        </div>
-        <div class="card__body">
-          <span><?php echo  $row["email"]; ?></span>
-          <p><?php echo $row["message"];  ?></p>
-        </div>
-      </div>
-    </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <div class="card__header center">
+                <span><?php echo $row["name"]; ?></span>
+              </div>
+              <div class="card__body">
+                <span><?php echo  $row["email"]; ?></span>
+                <p><?php echo $row["message"];  ?></p>
+              </div>
+            </div>
+          </div>
 
 
   <?php     
@@ -87,19 +84,6 @@ foreach($result as $row){
    mysqli_free_result($result);
    $conn->close();
   ?>
-
-
-    
-    
-    
-
-
-<?php  
-
-// SELECT * FROM Users
-
-?>
-
 
   </div>
 </div>
@@ -121,7 +105,6 @@ foreach($result as $row){
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- <script src="js/scripts.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"> </script>
     <script src="js/scripts.js"></script>

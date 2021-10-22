@@ -56,7 +56,7 @@
   <div class="info__elements row">
 <?php    
 
-  $conn = new mysqli("localhost", "root", "J6kl&89#");
+  $conn = new mysqli("localhost", "root", "root");
   $conn->query("USE ajax1");
   $get_info = "SELECT * FROM Users";
   $result= $conn->query($get_info);

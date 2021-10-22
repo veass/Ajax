@@ -68,11 +68,11 @@
           <div class="col-12 col-lg-4">
             <div class="card">
               <div class="card__header center">
-                <span><?php echo $row["name"]; ?></span>
+                <span><?php echo htmlspecialchars($row["name"]); ?></span>
               </div>
               <div class="card__body">
-                <span><?php echo  $row["email"]; ?></span>
-                <p><?php echo $row["message"];  ?></p>
+                <span><?php echo  htmlspecialchars($row["email"]); ?></span>
+                <p><?php echo htmlspecialchars($row["message"]);  ?></p>
               </div>
             </div>
           </div>

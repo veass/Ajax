@@ -47,11 +47,11 @@
       $new_block = '<div class="col-12 col-lg-4">
       <div class="card">
         <div class="card__header center">
-          <span>'.$row["name"].'</span>
+          <span>'.htmlspecialchars($row["name"]).'</span>
         </div>
         <div class="card__body">
-          <span>'.$row["email"].'</span>
-          <p>'.$row["message"].'</p>
+          <span>'.htmlspecialchars($row["email"]).'</span>
+          <p>'.htmlspecialchars($row["message"]).'</p>
         </div>
       </div>
     </div>';
